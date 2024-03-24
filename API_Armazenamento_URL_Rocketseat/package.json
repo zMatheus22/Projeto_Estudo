@@ -1,0 +1,29 @@
+{
+  "name": "projeto_estudo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "services:up": "docker compose up -d",
+    "services:stop": "docker compose stop",
+    "services:down": "docker compose down",
+    "start-docker": "npm run services:down && npm run services:up",
+    "setup": "tsx ./src/setup.ts",
+    "dev": "npm run start-docker && tsx watch ./src/server.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.11.30",
+    "tsx": "^4.7.1",
+    "typescript": "^5.4.3"
+  },
+  "dependencies": {
+    "fastify": "^4.26.2",
+    "postgres": "^3.4.4",
+    "redis": "^4.6.13",
+    "zod": "^3.22.4"
+  }
+}
