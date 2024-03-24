@@ -1,0 +1,23 @@
+# Criar o link para o redirecionamento
+POST http://localhost:3333/api/links
+Content-Type: application/json
+
+{
+    "code": "facebook",
+    "url": "https://www.facebook.com"
+}
+
+###
+
+# Visualizar os links criados
+GET http://localhost:3333/api/links
+
+###
+
+# Acessar o direcionamento do link criado anteriormente
+GET http://localhost:3333/facebook
+
+###
+
+# Visualizar a quantidade de clique dos links
+GET http://localhost:3333/api/metrics
